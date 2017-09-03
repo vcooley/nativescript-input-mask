@@ -1,6 +1,5 @@
-import { Common } from './input-mask.common';
-export declare class InputMask extends Common {
-  // define your typings manually
-  // or..
-  // take the ios or android .d.ts files and copy/paste them here
+import { TextField } from 'tns-core-modules/ui/text-field';
+
+export declare class InputMask extends TextField {
+
 }
