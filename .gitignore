@@ -5,7 +5,6 @@
 *.js.map
 *.log
 src/*.d.ts
-src/typings
 !src/index.d.ts
 !src/references.d.ts
 !src/scripts/*.js

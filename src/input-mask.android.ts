@@ -1,5 +1,5 @@
-import { InputMaskCommon } from './input-mask.common';
+import { InputMaskBase } from './input-mask.common';
 
-export class InputMask extends InputMaskCommon {
+export class InputMask extends InputMaskBase {
 
 }
