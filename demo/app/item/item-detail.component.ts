@@ -11,6 +11,7 @@ import { ItemService } from "./item.service";
 })
 export class ItemDetailComponent implements OnInit {
     item: Item;
+    testText = '2';
 
     constructor(
         private itemService: ItemService,
@@ -20,5 +21,11 @@ export class ItemDetailComponent implements OnInit {
     ngOnInit(): void {
         const id = +this.route.snapshot.params["id"];
         this.item = this.itemService.getItem(id);
+    }
+
+    onTextChange(args) {
+        console.log('text changed');
+        this.testText = args.value;
+        console.log(this.testText)
     }
 }

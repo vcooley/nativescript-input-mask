@@ -1,3 +1,4 @@
+import { textProperty } from 'tns-core-modules/ui/text-field/text-field-common'
 import { InputMaskBase } from './input-mask.common';
 
 export class InputMaskDelegateImpl extends MaskedTextFieldDelegate {
@@ -38,7 +39,7 @@ export class InputMaskDelegateImpl extends MaskedTextFieldDelegate {
 		super.textFieldShouldChangeCharactersInRangeReplacementString(textField, range, replacementString);
 		const newText = textField.text;
 		if (previousText !== newText) {
-			this._defaultImpl.textFieldShouldChangeCharactersInRangeReplacementString(textField, range, replacementString);
+			textProperty.nativeValueChange(this._owner.get(), newText);
 		}
 		return false;
 	}

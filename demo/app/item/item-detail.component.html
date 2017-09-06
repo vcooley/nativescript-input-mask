@@ -5,5 +5,5 @@
         <Label class="h2" [text]="item.name"></Label>
     </FlexboxLayout>
     <Label class="h4" [text]="item.role"></Label>
-    <InputMask class="input-border"></InputMask>
+    <InputMask class="input-border" [text]="testText" (textChange)="onTextChange($event)"></InputMask>
 </FlexboxLayout>
