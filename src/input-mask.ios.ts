@@ -9,7 +9,7 @@ class ListenerImpl extends NSObject implements MaskedTextFieldDelegateListener {
 		listener._owner = owner;
 	}
 
-	private _owner: InputMask;
+	private _owner: WeakRef<InputMask>;
 
 	public textFieldDidFillMandatoryCharactersDidExtractValue(textField: UITextField, complete: boolean, value: string): void {
 		const owner = owner.get();
