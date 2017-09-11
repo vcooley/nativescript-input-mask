@@ -1,11 +1,34 @@
 
 declare var InputMaskVersionNumber: number;
 
-declare var InputMaskVersionNumber: number;
+declare var InputMaskVersionNumberVar: number;
 
 declare var InputMaskVersionString: interop.Reference<number>;
 
 declare var InputMaskVersionStringVar: interop.Reference<number>;
+
+declare class Mask extends NSObject {
+
+	static alloc(): Mask; // inherited from NSObject
+
+	static getOrCreateWithFormatError(format: string): Mask;
+
+	static new(): Mask; // inherited from NSObject
+
+	constructor(o: { format: string; });
+
+	acceptableTextLength(): number;
+
+	acceptableValueLength(): number;
+
+	initWithFormatError(format: string): this;
+
+	placeholder(): string;
+
+	totalTextLength(): number;
+
+	totalValueLength(): number;
+}
 
 declare class MaskedTextFieldDelegate extends NSObject implements UITextFieldDelegate {
 
@@ -20,6 +43,8 @@ declare class MaskedTextFieldDelegate extends NSObject implements UITextFieldDel
 	delegate: NSObject;
 
 	listener: MaskedTextFieldDelegateListener;
+
+	mask: Mask;
 
 	maskFormat: string;
 
