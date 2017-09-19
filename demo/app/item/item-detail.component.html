@@ -5,5 +5,7 @@
         <Label class="h2" [text]="item.name"></Label>
     </FlexboxLayout>
     <Label class="h4" [text]="item.role"></Label>
-    <InputMask class="input-border" [text]="testText" (textChange)="onTextChange($event)"></InputMask>
+    <InputMask class="input-border" [text]="testText" (extractedValueChange)="onExtractedValueChange($event)"  [mask]="mask"></InputMask>
+    <Label [text]="'value: ' + extractedValue"></Label>
+    <Button (tap)="testText='123'" text="tap me"></Button>
 </FlexboxLayout>

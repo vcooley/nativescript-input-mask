@@ -1,4 +1,4 @@
-import { Property } from 'tns-core-modules/ui/core/view';
+import { Property, booleanConverter } from 'tns-core-modules/ui/core/view';
 import { TextField } from 'tns-core-modules/ui/text-field';
 
 import { InputMask as InputMaskDefinition } from '.';
@@ -12,8 +12,9 @@ export abstract class InputMaskBase extends TextField implements InputMaskDefini
 export const completedProperty = new Property<InputMaskBase, boolean>({
 	name: 'completed',
 	defaultValue: false,
+	valueConverter: booleanConverter,
 	valueChanged(target, oldValue, newValue) {
-
+		console.log('completed property value changed', newValue);
 	}
 });
 completedProperty.register(InputMaskBase);
@@ -21,8 +22,8 @@ completedProperty.register(InputMaskBase);
 export const extractedValueProperty = new Property<InputMaskBase, string>({
 	name: 'extractedValue',
 	defaultValue: '',
-	valueChanged(owner, oldValue, newValue) {
-
+	valueChanged(target, oldValue, newValue) {
+		console.log('extracted value property changed', newValue);
 	}
 });
 extractedValueProperty.register(InputMaskBase);
@@ -30,8 +31,5 @@ extractedValueProperty.register(InputMaskBase);
 export const maskProperty = new Property<InputMaskBase, string>({
 	name: 'mask',
 	defaultValue: '',
-	valueChanged: (target, oldValue, newValue) => {
-
-	}
 });
 maskProperty.register(InputMaskBase);

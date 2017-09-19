@@ -12,6 +12,8 @@ import { ItemService } from "./item.service";
 export class ItemDetailComponent implements OnInit {
     item: Item;
     testText = '2';
+    mask = '[AAA]'
+	extractedValue: string;
 
     constructor(
         private itemService: ItemService,
@@ -22,10 +24,9 @@ export class ItemDetailComponent implements OnInit {
         const id = +this.route.snapshot.params["id"];
         this.item = this.itemService.getItem(id);
     }
-
-    onTextChange(args) {
-        console.log('text changed');
-        this.testText = args.value;
-        console.log(this.testText)
+    
+    onExtractedValueChange(args) {
+        console.log(args.value)
+        this.extractedValue = args.value;
     }
 }
