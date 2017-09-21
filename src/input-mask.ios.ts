@@ -21,11 +21,6 @@ class ListenerImpl extends NSObject implements MaskedTextFieldDelegateListener {
 		}
 	}
 
-	dealloc() {
-		console.log('dealloc called');
-		super.dealloc();
-	}
-
 }
 
 class InputMaskDelegateImpl extends MaskedTextFieldDelegate {
@@ -65,6 +60,7 @@ class InputMaskDelegateImpl extends MaskedTextFieldDelegate {
 		}
 		return false;
 	}
+	
 }
 
 export class InputMask extends InputMaskBase {
@@ -90,6 +86,7 @@ export class InputMask extends InputMaskBase {
 
 	[maskProperty.setNative](mask: string) {
 		this._delegate.maskFormat = mask;
+		this[textProperty.setNative](this.text);
 	}
 
 	[textProperty.setNative](text: string) {

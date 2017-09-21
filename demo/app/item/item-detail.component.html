@@ -8,4 +8,5 @@
     <InputMask class="input-border" [text]="testText" (extractedValueChange)="onExtractedValueChange($event)"  [mask]="mask"></InputMask>
     <Label [text]="'value: ' + extractedValue"></Label>
     <Button (tap)="testText='123'" text="tap me"></Button>
+    <Button (tap)="mask='[A00]'" text="mask change"></Button>
 </FlexboxLayout>
