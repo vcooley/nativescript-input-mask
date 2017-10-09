@@ -1,4 +1,4 @@
-import { textProperty } from 'tns-core-modules/ui/text-field/text-field-common'
+import { textProperty } from 'tns-core-modules/ui/text-field/text-field-common';
 import { completedProperty, extractedValueProperty, InputMaskBase, maskProperty } from './input-mask.common';
 
 class ListenerImpl extends NSObject implements MaskedTextFieldDelegateListener {
