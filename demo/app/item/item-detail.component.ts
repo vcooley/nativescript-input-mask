@@ -12,7 +12,7 @@ import { ItemService } from "./item.service";
 export class ItemDetailComponent implements OnInit {
     item: Item;
     testText = '2';
-    mask = '[AAA]'
+    mask = '[AAA]-[aaa]'
 	extractedValue: string;
 
     constructor(
@@ -28,5 +28,9 @@ export class ItemDetailComponent implements OnInit {
     onExtractedValueChange(args) {
         console.log(args.value)
         this.extractedValue = args.value;
+    }
+
+    onTextChange(args) {
+        console.log(args.value);
     }
 }
