@@ -9,130 +9,130 @@ declare var InputMaskVersionStringVar: interop.Reference<number>;
 
 declare class Mask extends NSObject {
 
-	static alloc(): Mask; // inherited from NSObject
+  static alloc(): Mask; // inherited from NSObject
 
-	static getOrCreateWithFormatError(format: string): Mask;
+  static getOrCreateWithFormatError(format: string): Mask;
 
-	static new(): Mask; // inherited from NSObject
+  static new(): Mask; // inherited from NSObject
 
-	constructor(o: { format: string; });
+  constructor(o: { format: string; });
 
-	acceptableTextLength(): number;
+  acceptableTextLength(): number;
 
-	acceptableValueLength(): number;
+  acceptableValueLength(): number;
 
-	initWithFormatError(format: string): this;
+  initWithFormatError(format: string): this;
 
-	placeholder(): string;
+  placeholder(): string;
 
-	totalTextLength(): number;
+  totalTextLength(): number;
 
-	totalValueLength(): number;
+  totalValueLength(): number;
 }
 
 declare class MaskedTextFieldDelegate extends NSObject implements UITextFieldDelegate {
 
-	static alloc(): MaskedTextFieldDelegate; // inherited from NSObject
+  static alloc(): MaskedTextFieldDelegate; // inherited from NSObject
 
-	static new(): MaskedTextFieldDelegate; // inherited from NSObject
+  static new(): MaskedTextFieldDelegate; // inherited from NSObject
 
-	autocomplete: boolean;
+  autocomplete: boolean;
 
-	autocompleteOnFocus: boolean;
+  autocompleteOnFocus: boolean;
 
-	delegate: NSObject;
+  delegate: NSObject;
 
-	listener: MaskedTextFieldDelegateListener;
+  listener: MaskedTextFieldDelegateListener;
 
-	mask: Mask;
+  mask: Mask;
 
-	maskFormat: string;
+  maskFormat: string;
 
-	readonly debugDescription: string; // inherited from NSObjectProtocol
+  readonly debugDescription: string; // inherited from NSObjectProtocol
 
-	readonly description: string; // inherited from NSObjectProtocol
+  readonly description: string; // inherited from NSObjectProtocol
 
-	readonly hash: number; // inherited from NSObjectProtocol
+  readonly hash: number; // inherited from NSObjectProtocol
 
-	readonly isProxy: boolean; // inherited from NSObjectProtocol
+  readonly isProxy: boolean; // inherited from NSObjectProtocol
 
-	readonly superclass: typeof NSObject; // inherited from NSObjectProtocol
+  readonly superclass: typeof NSObject; // inherited from NSObjectProtocol
 
-	readonly  // inherited from NSObjectProtocol
+  readonly  // inherited from NSObjectProtocol
 
-	constructor(o: { format: string; });
+  constructor(o: { format: string; });
 
-	acceptableTextLength(): number;
+  acceptableTextLength(): number;
 
-	acceptableValueLength(): number;
+  acceptableValueLength(): number;
 
-	class(): typeof NSObject;
+  class(): typeof NSObject;
 
-	conformsToProtocol(aProtocol: any /* Protocol */): boolean;
+  conformsToProtocol(aProtocol: any /* Protocol */): boolean;
 
-	initWithFormat(format: string): this;
+  initWithFormat(format: string): this;
 
-	isEqual(object: any): boolean;
+  isEqual(object: any): boolean;
 
-	isKindOfClass(aClass: typeof NSObject): boolean;
+  isKindOfClass(aClass: typeof NSObject): boolean;
 
-	isMemberOfClass(aClass: typeof NSObject): boolean;
+  isMemberOfClass(aClass: typeof NSObject): boolean;
 
-	performSelector(aSelector: string): any;
+  performSelector(aSelector: string): any;
 
-	performSelectorWithObject(aSelector: string, object: any): any;
+  performSelectorWithObject(aSelector: string, object: any): any;
 
-	performSelectorWithObjectWithObject(aSelector: string, object1: any, object2: any): any;
+  performSelectorWithObjectWithObject(aSelector: string, object1: any, object2: any): any;
 
-	placeholder(): string;
+  placeholder(): string;
 
-	putWithTextInto(text: string, field: UITextField): void;
+  putWithTextInto(text: string, field: UITextField): void;
 
-	respondsToSelector(aSelector: string): boolean;
+  respondsToSelector(aSelector: string): boolean;
 
-	retainCount(): number;
+  retainCount(): number;
 
-	self(): this;
+  self(): this;
 
-	textFieldDidBeginEditing(textField: UITextField): void;
+  textFieldDidBeginEditing(textField: UITextField): void;
 
-	textFieldDidEndEditing(textField: UITextField): void;
+  textFieldDidEndEditing(textField: UITextField): void;
 
-	textFieldDidEndEditingReason(textField: UITextField, reason: UITextFieldDidEndEditingReason): void;
+  textFieldDidEndEditingReason(textField: UITextField, reason: UITextFieldDidEndEditingReason): void;
 
-	textFieldShouldBeginEditing(textField: UITextField): boolean;
+  textFieldShouldBeginEditing(textField: UITextField): boolean;
 
-	textFieldShouldChangeCharactersInRangeReplacementString(textField: UITextField, range: NSRange, string: string): boolean;
+  textFieldShouldChangeCharactersInRangeReplacementString(textField: UITextField, range: NSRange, string: string): boolean;
 
-	textFieldShouldClear(textField: UITextField): boolean;
+  textFieldShouldClear(textField: UITextField): boolean;
 
-	textFieldShouldEndEditing(textField: UITextField): boolean;
+  textFieldShouldEndEditing(textField: UITextField): boolean;
 
-	textFieldShouldReturn(textField: UITextField): boolean;
+  textFieldShouldReturn(textField: UITextField): boolean;
 
-	totalTextLength(): number;
+  totalTextLength(): number;
 
-	totalValueLength(): number;
+  totalValueLength(): number;
 }
 
 interface MaskedTextFieldDelegateListener extends UITextFieldDelegate {
 
-	textFieldDidFillMandatoryCharactersDidExtractValue?(textField: UITextField, complete: boolean, value: string): void;
+  textFieldDidFillMandatoryCharactersDidExtractValue?(textField: UITextField, complete: boolean, value: string): void;
 }
 declare var MaskedTextFieldDelegateListener: {
 
-	prototype: MaskedTextFieldDelegateListener;
+  prototype: MaskedTextFieldDelegateListener;
 };
 
 declare class PolyMaskTextFieldDelegate extends MaskedTextFieldDelegate {
 
-	static alloc(): PolyMaskTextFieldDelegate; // inherited from NSObject
+  static alloc(): PolyMaskTextFieldDelegate; // inherited from NSObject
 
-	static new(): PolyMaskTextFieldDelegate; // inherited from NSObject
+  static new(): PolyMaskTextFieldDelegate; // inherited from NSObject
 
-	affineFormats: NSArray<string>;
+  affineFormats: NSArray<string>;
 
-	constructor(o: { primaryFormat: string; affineFormats: NSArray<string>; });
+  constructor(o: { primaryFormat: string; affineFormats: NSArray<string>; });
 
-	initWithPrimaryFormatAffineFormats(primaryFormat: string, affineFormats: NSArray<string>): this;
+  initWithPrimaryFormatAffineFormats(primaryFormat: string, affineFormats: NSArray<string>): this;
 }

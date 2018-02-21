@@ -26,7 +26,7 @@ export class ItemDetailComponent implements OnInit {
     }
 
     onExtractedValueChange(args) {
-        console.log('Extracted value changed:  ', args.value)
+        console.log('Extracted value changed:  ', args.value);
         this.extractedValue = args.value;
     }
 
