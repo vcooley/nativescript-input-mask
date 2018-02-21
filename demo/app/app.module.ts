@@ -7,10 +7,10 @@ import { AppComponent } from "./app.component";
 import { ItemService } from "./item/item.service";
 import { ItemsComponent } from "./item/items.component";
 import { ItemDetailComponent } from "./item/item-detail.component";
+import { InputMaskModule } from 'nativescript-input-mask/angular';
 import { InputMask } from 'nativescript-input-mask';
 
-registerElement('InputMask', () => InputMask);
-
+// registerElement('InputMask', () => InputMask);
 
 @NgModule({
     bootstrap: [
@@ -18,7 +18,8 @@ registerElement('InputMask', () => InputMask);
     ],
     imports: [
         NativeScriptModule,
-        AppRoutingModule
+        AppRoutingModule,
+        InputMaskModule,
     ],
     declarations: [
         AppComponent,

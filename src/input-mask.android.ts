@@ -32,9 +32,13 @@ export class InputMask extends InputMaskBase {
 		this.valueListener = ValueListener.initWithOwner(new WeakRef(this));
 	}
 
+	initNativeView() {
+		super.initNativeView();
+	}
+
 	createNativeView() {
 		const editText: android.widget.EditText = <android.widget.EditText>super.createNativeView();
-		editText.removeTextChangedListener((editText as any).listener);
+		// editText.removeTextChangedListener((editText as any).listener);
 		return editText;
 	}
 
@@ -52,11 +56,11 @@ export class InputMask extends InputMaskBase {
 			editText.removeTextChangedListener(this.maskedTextChangedListener);
 		}
 		this.maskedTextChangedListener = new com.redmadrobot.inputmask.MaskedTextChangedListener(
-			mask, 
+			mask,
 			this.autocorrect,
 			editText,
 			(editText as any).listener,
-			this.valueListener
+			this.valueListener,
 		);
 		editText.addTextChangedListener(this.maskedTextChangedListener);
 		editText.setOnFocusChangeListener(this.maskedTextChangedListener);
