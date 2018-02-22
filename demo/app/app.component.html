@@ -1,2 +1,15 @@
-<!-- https://docs.nativescript.org/angular/core-concepts/angular-navigation.html#page-router-outlet -->
-<page-router-outlet></page-router-outlet>
+<StackLayout>
+  <StackLayout>
+    <InputMask
+      [mask]="mask"
+      hint="(123) 456-7890"
+      (textChange)="onTextChange($event)"
+      (extractedValueChange)="onExtractedValueChange($event)"
+      (completedChange)="onCompleteChange($event)">
+    </InputMask>
+    <Label [text]="'Text: ' + text"></Label>
+    <Label [text]="'Extracted: ' + extractedValue"></Label>
+    <Label [text]="'Complete: ' + complete"></Label>
+    <Label [text]="bindingTest"></Label>
+  </StackLayout>
+</StackLayout>

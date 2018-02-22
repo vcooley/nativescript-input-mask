@@ -37,7 +37,7 @@ export class InputMask extends InputMaskBase {
 
   createNativeView() {
     const editText: android.widget.EditText = <android.widget.EditText>super.createNativeView();
-    // editText.removeTextChangedListener((editText as any).listener);
+    editText.removeTextChangedListener((editText as any).listener);
     return editText;
   }
 
@@ -46,6 +46,11 @@ export class InputMask extends InputMaskBase {
   }
 
   [extractedValueProperty.setNative]() {
+    // Should not be set manually
+  }
+
+  [extractedValueProperty.getDefault]() {
+    return '';
     // Should not be set manually
   }
 
