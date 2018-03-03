@@ -1,5 +1,5 @@
 declare namespace com.redmadrobot.inputmask {
-  module MaskedTextChangedListener {
+  namespace MaskedTextChangedListener {
     export class ValueListener {
       constructor(listeners: { onTextChanged(maskFilled: boolean, extractedValue: string): void; });
       textChanged(maskFilled: boolean, extractedValue: string): void;

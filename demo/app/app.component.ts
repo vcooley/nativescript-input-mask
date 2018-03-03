@@ -10,15 +10,14 @@ export class AppComponent implements OnInit {
   extractedValue = '';
   complete = false;
   mask: string;
-  bindingTest = '123';
 
   americanExpressMask = '[0000] [000000] [00000]';
-  visaMask = '[0000] [0000] [0000] [0000]';
+  defaultMask = '[0000] [0000] [0000] [0000]';
 
   constructor(private zone: NgZone) { }
 
   ngOnInit() {
-    this.mask = this.visaMask;
+    this.mask = this.defaultMask;
   }
 
   onTextChange(args) {
@@ -29,9 +28,9 @@ export class AppComponent implements OnInit {
     this.extractedValue = args.value;
     const isAmex = ['34', '37'].includes(this.extractedValue.substr(0, 2));
     if (isAmex && this.mask !== this.americanExpressMask) {
-      this.mask = this.americanExpressMask;
-    } else if (!isAmex && this.mask !== this.visaMask) {
-      this.mask = this.visaMask;
+      setTimeout(() => this.mask = this.americanExpressMask, 0);
+    } else if (!isAmex && this.mask !== this.defaultMask) {
+      setTimeout(() => this.mask = this.defaultMask, 0);
     }
   }
 

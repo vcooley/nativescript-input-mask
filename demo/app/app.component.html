@@ -2,7 +2,7 @@
   <StackLayout>
     <InputMask
       [mask]="mask"
-      hint="(123) 456-7890"
+      hint="0000 0000 0000 0000"
       (textChange)="onTextChange($event)"
       (extractedValueChange)="onExtractedValueChange($event)"
       (completedChange)="onCompleteChange($event)">
@@ -10,6 +10,5 @@
     <Label [text]="'Text: ' + text"></Label>
     <Label [text]="'Extracted: ' + extractedValue"></Label>
     <Label [text]="'Complete: ' + complete"></Label>
-    <Label [text]="bindingTest"></Label>
   </StackLayout>
 </StackLayout>
