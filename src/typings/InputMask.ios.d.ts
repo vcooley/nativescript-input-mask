@@ -58,7 +58,7 @@ declare class MaskedTextFieldDelegate extends NSObject implements UITextFieldDel
 
   readonly superclass: typeof NSObject; // inherited from NSObjectProtocol
 
-  readonly  // inherited from NSObjectProtocol
+  readonly;  // inherited from NSObjectProtocol
 
   constructor(o: { format: string; });
 
@@ -102,7 +102,7 @@ declare class MaskedTextFieldDelegate extends NSObject implements UITextFieldDel
 
   textFieldShouldBeginEditing(textField: UITextField): boolean;
 
-  textFieldShouldChangeCharactersInRangeReplacementString(textField: UITextField, range: NSRange, string: string): boolean;
+  textFieldShouldChangeCharactersInRangeReplacementString(textField: UITextField, range: NSRange, replacementString: string): boolean;
 
   textFieldShouldClear(textField: UITextField): boolean;
 
