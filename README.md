@@ -60,7 +60,7 @@ _________________________________________________________
 
 ### Angular
 Add the following lines to `app/app.module.ts`:
-	```javascript
+```javascript
 import { InputMaskModule } from 'nativescript-input-mask/angular';
 
 @NgModule({
