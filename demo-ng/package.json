@@ -2,7 +2,7 @@
   "description": "NativeScript Application",
   "readme": "NativeScript Application",
   "nativescript": {
-    "id": "org.nativescript.demo-ng",
+    "id": "org.nativescript.demoNg",
     "tns-ios": {
       "version": "3.4.1"
     },
@@ -24,7 +24,7 @@
     "nativescript-input-mask": "../src",
     "nativescript-theme-core": "~1.0.2",
     "reflect-metadata": "~0.1.8",
-    "rxjs": "~5.4.2",
+    "rxjs": "~5.5.5",
     "tns-core-modules": "~3.4.1",
     "zone.js": "~0.8.17"
   },
