@@ -2,7 +2,7 @@
   "description": "NativeScript Application",
   "readme": "NativeScript Application",
   "nativescript": {
-    "id": "org.nativescript.demo",
+    "id": "org.nativescript.demo-ng",
     "tns-ios": {
       "version": "3.4.1"
     },
