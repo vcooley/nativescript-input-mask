@@ -1,6 +1,7 @@
 {
   "description": "NativeScript Application",
   "readme": "NativeScript Application",
+  "license": "Apache-2.0",
   "nativescript": {
     "id": "org.nativescript.demoNg",
     "tns-ios": {
