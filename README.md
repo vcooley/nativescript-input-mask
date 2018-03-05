@@ -60,7 +60,7 @@ _________________________________________________________
 
 ### Angular
 Add the following lines to `app/app.module.ts`:
-	```typescript
+	```javascript
 import { InputMaskModule } from 'nativescript-input-mask/angular';
 
 @NgModule({
@@ -75,7 +75,7 @@ import { InputMaskModule } from 'nativescript-input-mask/angular';
 ```
 
 Use like a `TextField` with a mask property and other event properties:
-```typescript
+```javascript
 import { Component, NgZone, OnInit } from "@angular/core";
 
 @Component({
