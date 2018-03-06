@@ -1,4 +1,4 @@
-import { Directive } from "@angular/core"; // TODO: check require .Directive without hacks
+import { Directive } from "@angular/core";
 
 @Directive({
   selector: "InputMask"

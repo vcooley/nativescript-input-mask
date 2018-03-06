@@ -13,7 +13,7 @@ tns plugin add nativescript-input-mask
 ## Usage
 Use by adding a `mask` property to an `InputMask` field. Masks can be changed on the fly, which causes the current extracted value to be re-applied to the new mask. Any characters that do not meet the mask criteria will be dropped.
 
-Documentation for masks is below (from [here](https://github.com/RedMadRobot/input-mask-ios)).
+Documentation for masks is below (from [here](https://github.com/RedMadRobot/input-mask-ios#description)).
 
 _________________________________________________________
 Masks consist of blocks of symbols, which may include:
@@ -84,12 +84,13 @@ import { Component, NgZone, OnInit } from "@angular/core";
     <StackLayout>
         <InputMask
             mask="([000]) [000]-[0000]"
-            (extractedValueChange)=onExtractedValueChange($event)>
+            (extractedValueChange)=onExtractedValueChange($event)
+            (completedChange)="onCompletedChage($event)">
         </InputMask>
     </StackLayout>
   `,
 })
-export class AppComponent implements {
+export class AppComponent {
     onExtractedValueChange(args) {
         // `args.value` includes only extracted characters, for instance
         // `1235551111` would be logged while the UI would display `(123) 555-1111`.
@@ -111,8 +112,8 @@ The `InputMask` class extends `TextField` and implements the following additiona
 
 | Property | Default | Description |
 | --- | --- | --- |
-| mask | '' | The mask property to apply to text entered into the field.
-| extractedValue | '' | The value extracted from the field.
+| mask | "" | The mask property to apply to text entered into the field.
+| extractedValue | "" | The value extracted from the field.
 | completed | false | Indicates whether all mandatory characters have been filled.
 
 ## License
