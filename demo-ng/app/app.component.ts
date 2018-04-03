@@ -1,4 +1,5 @@
 import { Component, NgZone, OnInit } from "@angular/core";
+import { FormGroup, FormBuilder } from "@angular/forms";
 
 @Component({
   selector: "ns-app",
@@ -6,6 +7,7 @@ import { Component, NgZone, OnInit } from "@angular/core";
 })
 
 export class AppComponent implements OnInit {
+  form: FormGroup;
   text = '';
   extractedValue = '';
   complete = false;
@@ -14,10 +16,13 @@ export class AppComponent implements OnInit {
   americanExpressMask = '[0000] [000000] [00000]';
   defaultMask = '[0000] [0000] [0000] [0000]';
 
-  constructor(private zone: NgZone) { }
+  constructor(private zone: NgZone, private formBuilder: FormBuilder) { }
 
   ngOnInit() {
     this.mask = this.defaultMask;
+    this.form = this.formBuilder.group({
+      phone: ['(555) 555-1234', [], []],
+    });
   }
 
   onTextChange(args) {
