@@ -1,6 +1,6 @@
 {
   "name": "nativescript-input-mask",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A Nativescript plugin to mask (format) text such as phone numbers or credit card numbers.",
   "repository": {
     "type": "git",

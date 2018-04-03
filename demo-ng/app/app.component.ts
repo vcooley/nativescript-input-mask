@@ -21,6 +21,7 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.mask = this.defaultMask;
     this.form = this.formBuilder.group({
+      // also works with text stripped of formatting '5555551234'
       phone: ['(555) 555-1234', [], []],
     });
   }
