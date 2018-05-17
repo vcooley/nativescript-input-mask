@@ -1,14 +1,14 @@
 import { NgModule, } from '@angular/core';
 import { registerElement } from 'nativescript-angular';
-import { DIRECTIVES } from './input-mask.directive';
+import { InputMaskTextValueAccessor } from './input-mask.directive';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [ DIRECTIVES ],
+  declarations: [ InputMaskTextValueAccessor ],
   providers: [],
   imports: [ FormsModule ],
   exports: [
-    DIRECTIVES,
+    InputMaskTextValueAccessor,
     FormsModule,
   ],
 })

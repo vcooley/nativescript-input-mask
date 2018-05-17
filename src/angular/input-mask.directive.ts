@@ -1,5 +1,5 @@
 import { Directive, ExistingProvider, forwardRef, HostListener, ElementRef } from "@angular/core";
-import { NG_VALUE_ACCESSOR } from "@angular/forms";
+import { NG_VALUE_ACCESSOR, ControlValueAccessor } from "@angular/forms";
 import { BaseValueAccessor } from "nativescript-angular";
 
 import { InputMask } from "..";
@@ -14,19 +14,15 @@ const TEXT_VALUE_ACCESSOR: ExistingProvider = {
   selector: "InputMask[ngModel], InputMask[formControlName], InputMask[formControl]",
   providers: [ TEXT_VALUE_ACCESSOR ],
   host: {
-    '(textChange)': 'onChange($event.value)'
+    '(textChange)': 'onChange($event.value)',
+    '(touch)': 'onTouched()',
   }
 })
-export class InputMaskTextValueAccessor extends BaseValueAccessor<InputMask> {
+export class InputMaskTextValueAccessor extends BaseValueAccessor<InputMask> implements ControlValueAccessor {
 
   constructor(private elementRef: ElementRef) {
     super(elementRef.nativeElement);
   }
-
-  // @HostListener('textChange', ['$event'])
-  // textChangeListener(event) {
-  //   this.onChange(event.value);
-  // }
 
   onTouched = () => { };
 
@@ -36,5 +32,3 @@ export class InputMaskTextValueAccessor extends BaseValueAccessor<InputMask> {
   }
 
 }
-
-export const DIRECTIVES = [ InputMaskTextValueAccessor ];

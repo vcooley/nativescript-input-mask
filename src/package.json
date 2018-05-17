@@ -28,7 +28,8 @@
     "demo.reset": "cd ../demo-ng && rimraf platforms",
     "plugin.prepare": "npm run tsc && cd ../demo-ng && tns plugin remove nativescript-input-mask && tns plugin add ../src",
     "clean": "cd ../demo-ng && rimraf hooks node_modules platforms && cd ../src && rimraf node_modules && npm run plugin.link",
-    "ci.tslint": "npm i && tslint '**/*.ts' --config '../tslint.json' --exclude '**/node_modules/**'"
+    "ci.tslint": "npm i && tslint '**/*.ts' --config '../tslint.json' --exclude '**/node_modules/**'",
+    "ngc": "./node_modules/.bin/ngc --p tsconfig.ngc.json"
   },
   "keywords": [
     "NativeScript",
@@ -55,6 +56,7 @@
     "@angular/animations": "~5.2.0",
     "@angular/common": "~5.2.0",
     "@angular/compiler": "~5.2.0",
+    "@angular/compiler-cli": "~5.2.0",
     "@angular/core": "~5.2.0",
     "@angular/forms": "~5.2.0",
     "@angular/http": "~5.2.0",

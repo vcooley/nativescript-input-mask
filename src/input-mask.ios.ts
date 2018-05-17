@@ -32,8 +32,8 @@ class InputMaskDelegateImpl extends MaskedTextFieldDelegate {
     return delegate;
   }
 
-  private _owner: WeakRef<InputMask>;
-  private _defaultImpl: UITextFieldDelegate;
+  _owner: WeakRef<InputMask>;
+  _defaultImpl: UITextFieldDelegate;
 
   public textFieldShouldBeginEditing(textField: UITextField): boolean {
     return this._defaultImpl.textFieldShouldBeginEditing(textField);
