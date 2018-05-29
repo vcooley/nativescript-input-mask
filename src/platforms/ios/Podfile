@@ -1,4 +1,4 @@
-pod 'InputMask', :path => '~/Projects/input-mask-ios'
+pod 'InputMask'
 
 post_install do |installer|
   installer.pods_project.targets.each do |target|
