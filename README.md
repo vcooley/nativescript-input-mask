@@ -1,3 +1,5 @@
+**This project is no longer maintained. There is a more recently updated fork from nstudio: https://github.com/nstudio/nativescript-plugins/blob/main/packages/nativescript-input-mask/README.md **
+
 # Nativescript Input Mask
 
 Format user input and process only the characters valueable to your application. Use this plugin to format phone numbers, credit card numbers, and more in a way that is more friendly for your data handling processes.
