@@ -1,4 +1,4 @@
-**This project is no longer maintained. There is a more recently updated fork from nstudio: https://github.com/nstudio/nativescript-plugins/blob/main/packages/nativescript-input-mask/README.md **
+**This project is no longer maintained. There is a more recently updated fork from nstudio:** https://github.com/nstudio/nativescript-plugins/blob/main/packages/nativescript-input-mask/README.md 
 
 # Nativescript Input Mask
 
